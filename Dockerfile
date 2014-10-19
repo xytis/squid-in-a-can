@@ -9,4 +9,6 @@ RUN echo "visible_hostname squid.$HOSTNAME" >> /etc/squid3/squid.conf
 
 VOLUME /var/log/squid3
 
+RUN chown proxy:proxy /var/log/squid3
+
 CMD [ "squid3", "-N" ]
